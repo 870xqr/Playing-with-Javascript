@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylepage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Playing With Javascript</title>
+    <script src="scripting.js" defer></script>
+</head>
+
+<body>
+    <h2 class="big-heading">Playing with Javascript</h2>
+    <div class="border-addition">
+        <div class="counter-container">
+            <h2>Project 1: Counter</h2>
+            <div>
+                <h6 class="counter-large"><span id="counter-thingy">0</span></h6>
+            </div>
+            <div class="flex-box-counter-container">
+                <button class="btn btn-primary" id="increaseBtn">Increase Count</button>
+                <button class="btn btn-danger" id="decreaseBtn">Decrease Count</button>
+            </div>
+        </div>
+    </div>
+    <div class="border-addition">
+        <div class="randomNumGen-container">
+            <h2>Project 2: Random Number Generator</h2>
+            <h3><span id="generated-number">0</span></h3>
+            <div class="flex-box-randomNumGen-container">
+                <input placeholder="Enter the first Number" id="randomNumGen-num1">
+                <p>-</p>
+                <input placeholder="Enter the second Number" id="randomNumGen-num2">
+                <button class="btn btn-success" id="generateBtn">Generate</button>
+                <button class="btn btn-warning" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="border-addition">
+        <div class="animatedBtn-container">
+            <h2>Project 3: Animated Button</h2>
+            <div class="flex-box-animatedBtn-container">
+                <img src="../../../animatedButton1.png" width="350px" height="300px" id="animatedBtn">
+            </div>
+        </div>
+    </div>
+    <div class="border-addition">
+        <div class="todolist-container">
+            <h2>Project 4: To-do List</h2>
+            <div class="flex-box-todolist-container">
+                <input placeholder="What item do you want to add?" style="width: 500px" id="todo-item">
+                <button class="btn btn-primary" id="todoAddBtn">Add</button>
+                <button class="btn btn-warning" id="removeAllItemsBtn">Clear all Items</button>
+            </div>
+        </div>
+        <div>
+            <span id="actual-list-container"></span>
+        </div>
+    </div>
+    <div class="border-addition">
+        <div class="easy-calculator-container">
+            <h2>Project 5: Easy Calculator</h2>
+            <div class="flex-box-easy-calculator-container">
+                <input placeholder="Input 1" id="input-id-one">
+                <select id="operator-select" style="margin-top: 1%">
+                    <option>+</option>
+                    <option>-</option>
+                    <option>*</option>
+                    <option>/</option>
+                </select>
+                <input placeholder="Input 2" id="input-id-two">
+                <button class="btn btn-success" id="equal-btn">=</button>
+                <h3><span id="easy-calculator-span"></span></h3>
+            </div>
+        </div>
+    </div>
+    <div class="border-addition">
+        <div class="game-container">
+            <h2>Project 6: My First Game...?</h2>
+            <h4><span id="living-status">You're currently alive.</span></h4>
+        </div>
+    </div>
+    <div class="actual-game-container">
+        <button class="btn-green" id="btn-increase-id">Eat Fruits</button>
+        <div class="health-bar-amount" id="health-bar-id">
+            <div class="health-bar">
+                <h3 style="color: black">Health</h3>
+            </div>
+        </div>
+        <button class="btn-red" id="btn-decrease-id">Eat Small Pretzels</button>
+    </div>
+    <div class="actual-game-container">
+        <button class="btn-green" id="btn-increase-id2">Program</button>
+        <div class="health-bar-amount" id="mental-health-bar-id">
+            <div class="health-bar">
+                <h3 style="color: black">Mental Health</h3>
+            </div>
+        </div>
+        <button class="btn-red" id="btn-decrease-id2">Socialize</button>
+    </div>
+    <div class="border-addition">
+        <div class="game-container">
+            <h2>Project 7: Tic Tac Toe</h2>
+            <h4><span id="turn-status">It's X's turn.</span></h4>
+            <button class="btn-green" id="reset-ttt-id">Reset Game</button>
+        </div>
+    </div>
+    <div class="ttt-game-container">
+        <div class="grid border-col border-row row-first" id="grid-1" onclick="place(1)"></div>
+        <div class="grid border-col border-row" id="grid-2" onclick="place(2)"></div>
+        <div class="grid border-row" id="grid-3" onclick="place(3)"></div>
+        <div class="grid border-col border-row new-line row-first" id="grid-4" onclick="place(4)"></div>
+        <div class="grid border-col border-row" id="grid-5" onclick="place(5)"></div>
+        <div class="grid border-row" id="grid-6" onclick="place(6)"></div>
+        <div class="grid border-col new-line row-first" id="grid-7" onclick="place(7)"></div>
+        <div class="grid border-col" id="grid-8" onclick="place(8)"></div>
+        <div class="grid" id="grid-9" onclick="place(9)"></div>
+    </div>
+    <div class="border-addition">
+        <div class="game-container">
+            <h2>Project 8: Balloon Popping Game</h2>
+            <h4 id="difficulty"></h4>
+        </div>
+    </div>
+    <div class="balloon-game-container" id="balloon-game"></div>
+    <div class="border-addition">
+        <div class="game-container">
+            <h2>Project 9: Geometry Game</h2>
+            <h4 id="geometry-game-status"></h4>
+        </div>
+    </div>
+    <div class="geometry-game-container" id="geometry-game">
+        <h4 class="geometry-game-bsr" id="base-side-radius"></h4>
+        <input placeholder="Area in square centimeters" class="geometry-game-input" id="geometry-input">
+        <button class="btn-yellow" style="position: absolute; right: 35px; top: 50px"
+            id="geometry-answer-btn">Check</button>
+        <table style="position: absolute; right: 482px; top: 105px">
+            <tr>
+                <th>Correct</th>
+                <th>Incorrect</th>
+            </tr>
+            <tr>
+                <td id="geometry-num-correct">0</td>
+                <td id="geometry-num-incorrect">0</td>
+            </tr>
+        </table>
+    </div>
+    <div class="border-addition">
+        <div class="game-container">
+            <h2>Project 10: Number Guessing Game</h2>
+            <h4 id="guesses-left">You have 10 guesses.</h4>
+        </div>
+    </div>
+    <div class="guessing-game-container" id="guessing-game">
+        <input placeholder="Guess a number" id="guesses-input">
+        <button class="btn-green" style="height: 60px; position: absolute; top: 50px; left: 610px" id="check-answer-btn">Check</button>
+        <div class="previous-guesses">
+            <p id="previous-guesses-id">Previous Guesses: None</p>
+        </div>
+        <div class="guess-was">
+            <p id="guess-was-id">Last guess was...</p>
+        </div>
+    </div>
+    <!--<button class="btn-blue" style="margin-top: 10px; margin-left: 520px" onclick="window.location.href = '../secondpage/secondpage.html'">Click here to move to the next page</button>-->
+</body>
+
+</html>
